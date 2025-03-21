@@ -1,0 +1,29 @@
+## Algorithmic Complexity / Big-O / Asymptotic Analysis Notes
+
+- Big O Notation 
+    - O(n)
+        - Runs in linear time 
+        - n is the number of characters 
+        - the more characters there are, the more time the algorithm takes
+        - Example: iterating through characters in a string, "cat" has three characters so O(3)
+        - Best Case: omega(1) because the first element you are iterating through can be the one you are searching for
+        - Worst Case: O(n) because the last element may be the one you are searching for 
+    - O(1)
+        - Asymptotically constant 
+        - The input size doesn't matter, the runtime is the same no matter what
+        - Example: len = 1000, we store the length in a variable and access it later 
+        - Runs in Theta(1) time because best case and worst case is you look at the value to find the length of the string
+    - O(n^2)
+        - Eventually take more time than O(n) algorithms to run
+        - Don't always take more time than O(n), like for small input sizes 
+    - O(logn) 
+        - Take less time 
+        - Example: Binary search (using middle elements to find a number)
+        - size 8 -> 3 operations (log2 8) log 2 bc you're finding middle number then splitting the array 
+        - size 16 -> 4 operations (log2 16) size of array is double YET it's only one more operation than previous one
+        - omega(1) because in best case scenario, middle number is the one you are searching for 
+    - Upper and lower bounds on runtime/best case and worst case performances
+        - Best case: use omega 
+        - Worst case: use O notation 
+    - Theta
+        - Describes algorithms where best and worst cases are the same
