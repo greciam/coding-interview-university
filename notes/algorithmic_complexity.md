@@ -27,3 +27,45 @@
         - Worst case: use O notation 
     - Theta
         - Describes algorithms where best and worst cases are the same
+    
+- Analysis of Algorithms
+    - The RAM Computational model
+        - Each 'simple' operation takes 1 step (if, =, +, -, etc.)
+        - Loops, sorting, and subroutine calls are not one step, they depend on data size and subroutine content
+        - Each memory access takes one step
+        - Algorithm runtime is measured by counting the number of steps 
+        - Model is useful but it's not always reasonable for a given situation
+
+- Asymptotic Analysis CS 61B Lecture 19 (**GREAT video!)
+    - Let n be size of program's input
+    - Let T(n) be a real-world function describing a process (ex: maximum runtime given input of n items)
+    - Let f(n) represent an upper bound and preferred simplified function
+    - Big O is meant to simplify an algorithms running time, it doesn't generally care about constant factors, for example O(2n) isn't necessary
+    - T(n) is in O(f(n)) IF AND ONLY IF T(n) <= Cf(n) whenever n is bigger for some constant C
+        - n has to be big enough that T(n) fits under Cf(n)
+        - c has to be large enough that T(n) fits under Cf(n)
+        - N is a chosen n value, the vertical line used to do the proof
+    - Formally O(f(n)) is the set of all functions T(n) that satisfy:
+        - There exist positive constants C and N such that for all n >= N, T(n) <= Cf(n)
+    - Big O is an upper bound, it can say that something is fast but not that something is slow 
+    - Big O is used to indicate the dominating term/ the fastest growing term (for example we only care about n^3 if the function is n^3 + n^2 + n)
+    - Omega is the lower bound 
+- Smallest to Largest Functions
+    - O(1) - Constant 
+    - C O(logn) -> Logarithmic
+    - C (log^2 n) -> Log-squared
+    - C O(sqrt(n)) -> Root-n
+    - C O(n) -> Linear
+    - C O(n log n) 
+    - C O(n^2) -> Quadratic
+    - C O(n^3) -> Cubic
+    - C O(n^4) -> Quartic
+    - C O(2^n) -> Exponential
+    - C (e^n) -> Even More Exponential
+- O(nlogn) or faster time: considered "efficient"
+- n^7 or slower time: considered useless
+- Look out for:
+    - C MUST be a constant, it cannot be n
+    - Big O describes relationship between TWO functions but does not say what the functions are, you can choose any
+    - There are some cases in which constants matter
+    - Big O notation doesn't always tell the whole story, a computer may not be able to support certain processing in practice
